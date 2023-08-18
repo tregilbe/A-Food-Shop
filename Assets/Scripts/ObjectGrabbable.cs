@@ -8,6 +8,9 @@ public class ObjectGrabbable : MonoBehaviour
     private Rigidbody objectRigidbody;
     private Transform objectGrabPointTransform;
 
+    // boolean to keep track what is poisoned
+    public bool isPoisoned = false;
+
     private void Awake()
     {
         objectRigidbody = GetComponent<Rigidbody>();
@@ -39,5 +42,13 @@ public class ObjectGrabbable : MonoBehaviour
         }
     }
 
+    public void PoisonObject()
+    {
+        // set bool to true
+        isPoisoned = true;
+        // activate the particle system for poison effect
 
+        // Give item slightly green tone?
+        gameObject.GetComponent<Renderer>().material.color = Color.green;
+    }
 }
