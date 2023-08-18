@@ -7,7 +7,7 @@ public class CheckOutline : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Outline>().enabled = false;
+        gameObject.GetComponent<Outline>().OutlineWidth = 0;
     }
 
     // Update is called once per frame
@@ -18,11 +18,11 @@ public class CheckOutline : MonoBehaviour
 
     private void OnMouseOver()
     {
-        gameObject.GetComponent<Outline>().enabled = true;
+        gameObject.GetComponent<Outline>().OutlineWidth = 3;
     }
 
     private void OnMouseExit()
     {
-        gameObject.GetComponent<Outline>().enabled = false;
+        gameObject.GetComponent<Outline>().OutlineWidth = 0;
     }
 }
