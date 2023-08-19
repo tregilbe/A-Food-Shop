@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     bool isGrounded;
 
+    // Crouch variables
+    public float normalHeight, crouchHeight;
+
     // Update is called once per frame
     void Update()
     {
@@ -49,7 +52,17 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        } 
+        }
+
+        // Crouch mechanic
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            controller.height = crouchHeight;
+        }
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            controller.height = normalHeight;
+        }
 
         // Apply gravity over time
         velocity.y += gravity * Time.deltaTime;

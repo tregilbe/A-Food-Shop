@@ -336,7 +336,9 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  normalHeight: 2
+  crouchHeight: 0.6
 --- !u!114 &5323180598753595285
 MonoBehaviour:
   m_ObjectHideFlags: 0

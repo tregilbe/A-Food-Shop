@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PoisonBottle : MonoBehaviour
 {
+    public Color potionColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class PoisonBottle : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<ObjectGrabbable>() != null)
         {
-            collision.gameObject.GetComponent<ObjectGrabbable>().PoisonObject();
+            collision.gameObject.GetComponent<ObjectGrabbable>().PoisonObject(potionColor);
         }
     }
 }
