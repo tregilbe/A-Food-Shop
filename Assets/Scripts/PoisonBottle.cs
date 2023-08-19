@@ -5,11 +5,12 @@ using UnityEngine;
 public class PoisonBottle : MonoBehaviour
 {
     public Color potionColor;
+    private AudioSource audioplayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioplayer = this.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class PoisonBottle : MonoBehaviour
         if (collision.gameObject.GetComponent<ObjectGrabbable>() != null)
         {
             collision.gameObject.GetComponent<ObjectGrabbable>().PoisonObject(potionColor);
+            audioplayer.Play();
         }
     }
 }
