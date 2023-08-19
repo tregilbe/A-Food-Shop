@@ -12,16 +12,12 @@ public class AINavigation : MonoBehaviour
     int i = 0;
     private bool hitOnce = false;
 
-
-
-
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         sm = chairs.GetComponent<SeatingManagement>();
         agent.destination = sm.Chairs[i].transform.position;
     }
-
 
     private void Update()
     {
@@ -52,15 +48,12 @@ public class AINavigation : MonoBehaviour
                     i = 0;
                 }
 
-
             }
             else if (hitOnce)
             {
                 hitOnce = false;
             }
         }
-
-
     }
 }
 
