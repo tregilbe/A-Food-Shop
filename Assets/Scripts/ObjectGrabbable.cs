@@ -42,13 +42,13 @@ public class ObjectGrabbable : MonoBehaviour
         }
     }
 
-    public void PoisonObject()
+    public void PoisonObject(Color newColor)
     {
         // set bool to true
         isPoisoned = true;
         // activate the particle system for poison effect
 
         // Give item slightly green tone?
-        gameObject.GetComponent<Renderer>().material.color = Color.green;
+        gameObject.GetComponent<Renderer>().material.color = newColor;
     }
 }
