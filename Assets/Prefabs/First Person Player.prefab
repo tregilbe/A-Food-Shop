@@ -247,7 +247,7 @@ Transform:
   m_GameObject: {fileID: 7164715875815847526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.708}
+  m_LocalPosition: {x: 0, y: 0, z: 1.226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -282,7 +282,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.68849593, y: 0.68849593, z: 0.68849593}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8855746013065338874}
@@ -312,7 +312,7 @@ CharacterController:
   m_Height: 2.5
   m_Radius: 0.4
   m_SlopeLimit: 45
-  m_StepOffset: 0.7
+  m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -329,16 +329,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 4744710603560662781}
-  speed: 12
-  gravity: -9.81
-  jumpHeight: 3
+  speed: 4
+  gravity: -14.715
+  jumpHeight: 0.7
   groundCheck: {fileID: 7110306654122902067}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 128
   normalHeight: 2
-  crouchHeight: 0.6
+  crouchHeight: 0.5
 --- !u!114 &5323180598753595285
 MonoBehaviour:
   m_ObjectHideFlags: 0
