@@ -9,5 +9,4 @@ using UnityEngine;
 public class SeatingManagement : MonoBehaviour
 {
     public GameObject[] Chairs;
-
 }

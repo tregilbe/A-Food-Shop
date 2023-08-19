@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 
 public class AINavigation : MonoBehaviour
 {
@@ -9,17 +10,28 @@ public class AINavigation : MonoBehaviour
     private NavMeshAgent agent;
     SeatingManagement sm;
     public GameObject chairs;
-    int i = 0;
     private bool hitOnce = false;
-
+    int i;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         sm = chairs.GetComponent<SeatingManagement>();
+        i = Random.Range(0, sm.Chairs.Length);
         agent.destination = sm.Chairs[i].transform.position;
     }
 
     private void Update()
+    {
+        float dist = agent.remainingDistance;
+
+        GettingToChair();
+        if (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
+        {
+            
+        }
+    }
+
+    public void GettingToChair()
     {
         Vector3 direction = Vector3.forward;
         Ray raycast = new Ray(transform.position, transform.TransformDirection(direction * range));
