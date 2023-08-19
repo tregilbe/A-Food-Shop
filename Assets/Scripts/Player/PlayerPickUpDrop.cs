@@ -11,6 +11,8 @@ public class PlayerPickUpDrop : MonoBehaviour
 
     private ObjectGrabbable objectGrabbable;
 
+    private Button button;
+
     // Update is called once per frame
     private void Update()
     {
@@ -29,6 +31,19 @@ public class PlayerPickUpDrop : MonoBehaviour
                     }
                 }
             } 
+            else if (button != null)
+            {
+                // Not carrying an object, try to interact
+                float pickUpDistance = 2f;
+                if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLayerMask))
+                {
+                    if (raycastHit.transform.TryGetComponent(out button))
+                    {
+                        objectGrabbable.Grab(objectGrabPointTransform);
+                        Debug.Log("I tried to pick up " + objectGrabbable);
+                    }
+                }
+            }
             else
             {
                 // Currently carrying something, drop
