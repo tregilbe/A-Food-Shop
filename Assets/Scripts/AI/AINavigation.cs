@@ -11,7 +11,10 @@ public class AINavigation : MonoBehaviour
     SeatingManagement sm;
     public GameObject chairs;
     private bool hitOnce = false;
+    //public Transform plate;
     int i;
+    private float fixedRotation = 5;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -27,7 +30,8 @@ public class AINavigation : MonoBehaviour
         GettingToChair();
         if (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
         {
-            
+            Vector3 eulerAngles = transform.eulerAngles;
+            transform.eulerAngles = new Vector3(eulerAngles.x, fixedRotation, eulerAngles.z);
         }
     }
 
