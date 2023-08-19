@@ -55,11 +55,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Crouch mechanic
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             controller.height = crouchHeight;
         }
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             controller.height = normalHeight;
         }
