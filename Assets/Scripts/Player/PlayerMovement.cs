@@ -26,6 +26,14 @@ public class PlayerMovement : MonoBehaviour
     // Crouch variables
     public float normalHeight, crouchHeight;
 
+    // Anim stuff
+    public Animator anim;
+
+    public void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {

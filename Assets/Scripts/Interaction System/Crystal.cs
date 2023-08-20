@@ -12,9 +12,12 @@ public class Crystal : MonoBehaviour, I_Interactable
 
     public string InteractionPrompt => prompt;
 
+    [SerializeField] private GameObject player;
+
     private void Start()
     {
         currentMana = 0;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public bool Interact(Interactor interactor)
@@ -23,6 +26,7 @@ public class Crystal : MonoBehaviour, I_Interactable
         {
             // if player has enough mana, they win
             Debug.Log("You Win!");
+            player.GetComponent<PlayerMenuManager>().activateWinMenu();
         }
         else
         {
@@ -36,5 +40,20 @@ public class Crystal : MonoBehaviour, I_Interactable
     void Update()
     {
         prompt = currentMana + "/" + manaGoal + " Mana";
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Customer")
+        {
+            // If a customer enters this area, consume them for mana
+            Destroy(other);
+
+            // Generate a random number between 1 and 15
+            float randomNumber = Random.Range(0, 15);
+
+            // add it to the current mana
+            currentMana += randomNumber;
+        }
     }
 }
