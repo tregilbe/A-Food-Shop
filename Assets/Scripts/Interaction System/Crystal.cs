@@ -12,9 +12,12 @@ public class Crystal : MonoBehaviour, I_Interactable
 
     public string InteractionPrompt => prompt;
 
+    [SerializeField] private GameObject player;
+
     private void Start()
     {
         currentMana = 0;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public bool Interact(Interactor interactor)
@@ -23,6 +26,7 @@ public class Crystal : MonoBehaviour, I_Interactable
         {
             // if player has enough mana, they win
             Debug.Log("You Win!");
+            player.GetComponent<PlayerMenuManager>().activateWinMenu();
         }
         else
         {
