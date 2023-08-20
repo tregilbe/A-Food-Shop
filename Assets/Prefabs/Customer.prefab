@@ -6463,7 +6463,7 @@ GameObject:
   - component: {fileID: 5091061709926204270}
   - component: {fileID: 5730045422026051484}
   m_Layer: 0
-  m_Name: Customer 1
+  m_Name: Customer
   m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
