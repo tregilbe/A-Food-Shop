@@ -14,6 +14,7 @@ public class AINavigation : MonoBehaviour
     public NavMeshAgent agent;
     SeatingManagement sm;
     public GameObject chairs;
+    public DragBody dragBody;
 
     private Animator animator;
     private bool hitOnce = false;
@@ -107,6 +108,7 @@ public class AINavigation : MonoBehaviour
         }
         agent.enabled = true;
         animator.enabled = true;
+        dragBody.enabled = false;
     }
 
     public void EnableRagDoll()
@@ -117,7 +119,8 @@ public class AINavigation : MonoBehaviour
         }
         agent.enabled = false;
         animator.enabled = false;
-
+        dragBody.enabled = true;
+        gameObject.layer = 8;
     }
 
 

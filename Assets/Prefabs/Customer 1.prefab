@@ -3182,6 +3182,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4650841414960328947}
   - component: {fileID: 198557084086294536}
+  - component: {fileID: 2323647338753681771}
+  - component: {fileID: 4220117938177329729}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -3313,6 +3315,39 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.28162423, y: -0.03190115, z: 0.000000029802322}
     m_Extent: {x: 0.2907795, y: 0.20579639, z: 0.2620001}
   m_DirtyAABB: 0
+--- !u!114 &2323647338753681771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977120772821020821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5284b69c817970409bbdbfd1036d78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4220117938177329729
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977120772821020821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5240002, y: 0.5013275, z: 0.26891017}
+  m_Center: {x: -0.000000029802322, y: 1.296001, z: -0.020998903}
 --- !u!1 &2991484509556991499
 GameObject:
   m_ObjectHideFlags: 0
@@ -6534,7 +6569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   location: {fileID: 3847186215732811976}
+  agent: {fileID: 0}
   chairs: {fileID: 0}
+  dragBody: {fileID: 2323647338753681771}
 --- !u!1 &8526936145596843149
 GameObject:
   m_ObjectHideFlags: 0
