@@ -16189,7 +16189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1821579390970222561, guid: 0c19401636b035e4cb0fe6956fe3ff19, type: 3}
       propertyPath: m_Name
-      value: Burger
+      value: Burger test customer
       objectReference: {fileID: 0}
     - target: {fileID: 1821579390970222561, guid: 0c19401636b035e4cb0fe6956fe3ff19, type: 3}
       propertyPath: m_TagString
@@ -56420,6 +56420,10 @@ PrefabInstance:
     - target: {fileID: 1753792858122449980, guid: de222a33595280a4c983808243d3366a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134430878123403451, guid: de222a33595280a4c983808243d3366a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
