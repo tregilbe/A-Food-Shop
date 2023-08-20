@@ -1294,6 +1294,37 @@ Transform:
   - {fileID: 3513795067479543206}
   m_Father: {fileID: 4841836130592890391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2094927534169969375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8752828839222155378}
+  m_Layer: 0
+  m_Name: Eye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8752828839222155378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094927534169969375}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3866263415442342711}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2105446056561044153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1852,7 @@ GameObject:
   - component: {fileID: 446625281684071585}
   - component: {fileID: 5045026071446828471}
   - component: {fileID: 7266540553907948021}
+  - component: {fileID: 2355870311289342711}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -1844,6 +1876,7 @@ Transform:
   - {fileID: 6496416349847874064}
   - {fileID: 1221723300091342328}
   - {fileID: 7383164075111013232}
+  - {fileID: 8752828839222155378}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &446625281684071585
@@ -1879,7 +1912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a341c0e1d3c22ef469f9173d77b766d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navmeshAgent: {fileID: 0}
+  navmeshAgent: {fileID: 2355870311289342711}
   waypoints: []
 --- !u!114 &7266540553907948021
 MonoBehaviour:
@@ -1894,10 +1927,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: 
-  distance: 1
-  angle: 0
-  raycastTransform: {fileID: 0}
-  numRaycast: 2
+  distance: 4
+  angle: 60
+  raycastTransform: {fileID: 8752828839222155378}
+  numRaycast: 10
+--- !u!195 &2355870311289342711
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442033533765132669}
+  m_Enabled: 1
+  m_AgentTypeID: 1479372276
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3489396201779776877
 GameObject:
   m_ObjectHideFlags: 0
