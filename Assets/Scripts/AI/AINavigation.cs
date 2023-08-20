@@ -10,6 +10,7 @@ public class AINavigation : MonoBehaviour
     private NavMeshAgent agent;
     SeatingManagement sm;
     public GameObject chairs;
+    private Animator animator;
     private bool hitOnce = false;
     //public Transform plate;
     int i;
@@ -17,6 +18,7 @@ public class AINavigation : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         sm = chairs.GetComponent<SeatingManagement>();
         i = Random.Range(0, sm.Chairs.Length);
@@ -25,6 +27,7 @@ public class AINavigation : MonoBehaviour
 
     private void Update()
     {
+        animator.SetFloat("Speed", agent.speed);
         float dist = agent.remainingDistance;
 
         GettingToChair();
