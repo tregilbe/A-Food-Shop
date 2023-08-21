@@ -5795,7 +5795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657746779}
   - component: {fileID: 657746778}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DoorBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50981,7 +50981,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cb257f9ef806cbc4983712032d7bc188, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1
@@ -51563,6 +51563,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4607489187838822, guid: 00e2e59cbc04eab4a982218df54ce70b, type: 3}
   m_PrefabInstance: {fileID: 1773171823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1782244944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9200396749032237701, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
+  m_PrefabInstance: {fileID: 5706954778962817441}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803536632
 GameObject:
@@ -59483,6 +59488,7 @@ MonoBehaviour:
   prompt: Press 'E' to Enter Basement
   TargetEntryPoint: {fileID: 478686653378164365}
   ItemTargetPoint: {fileID: 2258890742952036322}
+  player: {fileID: 1782244944}
 --- !u!23 &1923930167328632820
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60923,6 +60929,7 @@ MonoBehaviour:
   prompt: Press 'E' to return to Shop
   TargetEntryPoint: {fileID: 6683119712491169028}
   ItemTargetPoint: {fileID: 3974788084790542954}
+  player: {fileID: 1782244944}
 --- !u!64 &4250845954310240354
 MeshCollider:
   m_ObjectHideFlags: 0
