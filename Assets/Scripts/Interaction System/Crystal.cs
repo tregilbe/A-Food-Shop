@@ -47,7 +47,7 @@ public class Crystal : MonoBehaviour, I_Interactable
         if(other.gameObject.tag == "Customer")
         {
             // If a customer enters this area, consume them for mana
-            Destroy(other);
+            Destroy(other.gameObject);
 
             // Generate a random number between 1 and 15
             float randomNumber = Random.Range(0, 15);
