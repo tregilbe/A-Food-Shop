@@ -6,6 +6,7 @@ public class Crystal : MonoBehaviour, I_Interactable
 {
     [SerializeField] private string prompt;
     private AudioSource audioSource;
+    public AudioClip audioClip;
 
     public float manaGoal = 100;
     public float currentMana = 0;
@@ -18,6 +19,7 @@ public class Crystal : MonoBehaviour, I_Interactable
     {
         currentMana = 0;
         player = GameObject.FindGameObjectWithTag("Player");
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     public bool Interact(Interactor interactor)
@@ -48,6 +50,9 @@ public class Crystal : MonoBehaviour, I_Interactable
         {
             // If a customer enters this area, consume them for mana
             Destroy(other.gameObject);
+
+            // Play the sound
+            audioSource.PlayOneShot(audioClip);
 
             // Generate a random number between 1 and 15
             float randomNumber = Random.Range(0, 15);
