@@ -1319,7 +1319,7 @@ Transform:
   m_GameObject: {fileID: 2094927534169969375}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.72, z: 0}
+  m_LocalPosition: {x: 0, y: 1.04, z: 0.363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1851,8 +1851,8 @@ GameObject:
   - component: {fileID: 3866263415442342711}
   - component: {fileID: 446625281684071585}
   - component: {fileID: 5045026071446828471}
-  - component: {fileID: 7266540553907948021}
   - component: {fileID: 2355870311289342711}
+  - component: {fileID: 3070547452302374279}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -1913,24 +1913,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navmeshAgent: {fileID: 2355870311289342711}
-  waypoints: []
---- !u!114 &7266540553907948021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3442033533765132669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf76213fec34ac5489df2d99c560906f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: 
-  distance: 4
-  angle: 60
-  raycastTransform: {fileID: 8752828839222155378}
-  numRaycast: 10
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &2355870311289342711
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1953,6 +1940,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3070547452302374279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442033533765132669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf76213fec34ac5489df2d99c560906f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Poison
+  distance: 6
+  angle: 90
+  raycastTransform: {fileID: 8752828839222155378}
+  numRaycast: 25
+  detectionPoint: 0
+  managerPlayer: {fileID: 0}
 --- !u!1 &3489396201779776877
 GameObject:
   m_ObjectHideFlags: 0
