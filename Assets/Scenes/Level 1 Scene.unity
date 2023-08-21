@@ -11453,6 +11453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poison Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 6754566520844206036, guid: 0887f8e7f4407ad408edb29f9028f475, type: 3}
+      propertyPath: m_TagString
+      value: Poison
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12005,10 +12009,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1401789244395390603, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070547452302374279, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: tagName
+      value: Poison
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070547452302374279, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: numRaycast
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 3070547452302374279, guid: 9771a444668cbfb449204e0071429327, type: 3}
       propertyPath: managerPlayer
       value: 
       objectReference: {fileID: 1782244944}
+    - target: {fileID: 3070547452302374279, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: detectionPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3442033533765132669, guid: 9771a444668cbfb449204e0071429327, type: 3}
       propertyPath: m_Name
       value: Guard
@@ -12069,6 +12089,18 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1801866507}
+    - target: {fileID: 5455056262105982871, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: m_Quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455056262105982871, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: m_SkinnedMotionVectors
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056540993745722527, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8752828839222155378, guid: 9771a444668cbfb449204e0071429327, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.04

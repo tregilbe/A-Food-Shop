@@ -5635,6 +5635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ai: {fileID: 5730045422026051484}
+  miniMe: {fileID: 2477824615945392953, guid: d8b4f75077fbeea46aae5a52f39cc0cd, type: 3}
+  spawner: {fileID: 3877916075538979713}
   poisonFood: {fileID: 0}
 --- !u!1 &6936859213241532599
 GameObject:
