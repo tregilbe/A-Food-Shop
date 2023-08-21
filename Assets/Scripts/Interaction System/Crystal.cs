@@ -16,7 +16,6 @@ public class Crystal : MonoBehaviour, I_Interactable
     private void Start()
     {
         currentMana = 0;
-        player = GameObject.FindGameObjectWithTag("Player");
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
