@@ -15,6 +15,7 @@ public class EatingFood : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
     
+    
     private ObjectGrabbable poison;
     private void Awake()
     {
@@ -33,9 +34,9 @@ public class EatingFood : MonoBehaviour
     {
         if (other.gameObject.tag == "Poison")
         {
+            audioSource.PlayOneShot(audioClip);
             //print("Dead!!!!");
             Destroy(other.gameObject);
-            audioSource.PlayOneShot(audioClip);
             spawnsystem.spawnCount--;
             Instantiate(miniMe, spawner.position, spawner.rotation);
             ai.EnableRagDoll();
@@ -53,9 +54,9 @@ public class EatingFood : MonoBehaviour
             spawnsystem.spawnCount--;
             if (transform.parent != null)
             {
-                Destroy(transform.parent.gameObject);
+                Destroy(transform.parent.gameObject,2);
             }
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,1);
 
         }
     }

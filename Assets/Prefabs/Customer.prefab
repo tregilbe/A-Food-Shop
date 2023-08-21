@@ -5642,6 +5642,7 @@ MonoBehaviour:
   poisonFood: {fileID: 0}
   audioSource: {fileID: 797529262470654840}
   audioClip: {fileID: 8300000, guid: dbcf0b8f179f2874298e5c9de4ec8320, type: 3}
+  audioClip2: {fileID: 8300000, guid: dbcf0b8f179f2874298e5c9de4ec8320, type: 3}
 --- !u!82 &797529262470654840
 AudioSource:
   m_ObjectHideFlags: 0
