@@ -8,6 +8,7 @@ public class BasementHatch : MonoBehaviour, I_Interactable
     [SerializeField] private string prompt;
 
     [SerializeField] private Transform TargetEntryPoint;
+    [SerializeField] private Transform ItemTargetPoint;
 
     public GameObject player;
 
@@ -33,5 +34,13 @@ public class BasementHatch : MonoBehaviour, I_Interactable
 
         Debug.Log("Tried to move player to basement");
         return true;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag != "Player")
+        {
+            other.transform.position = ItemTargetPoint.position;
+        }
     }
 }

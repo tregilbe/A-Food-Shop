@@ -8,15 +8,6 @@ public class Raycasting : Perception
 
     [SerializeField][Range(2, 50)] public int numRaycast = 2;
 
-    [SerializeField] float detectionPoint = 0;
-    private PlayerMenuManager manager;
-    public GameObject managerPlayer;
-
-    private void Start()
-    {
-        manager = managerPlayer.GetComponent<PlayerMenuManager>();
-    }
-
     public void Update()
     {
         GetGameObjects();
@@ -38,11 +29,6 @@ public class Raycasting : Perception
                 {
                     Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
                     result.Add(raycastHit.collider.gameObject);
-                    detectionPoint += 1;
-                    if (detectionPoint == 100)
-                    {
-                        manager.activateLoseMenu();
-                    }
                 }
             }
             else

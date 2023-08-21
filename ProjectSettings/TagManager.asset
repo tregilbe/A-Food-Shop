@@ -7,7 +7,6 @@ TagManager:
   - Seating
   - Customer
   - TrashCan
-  - Poison
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - Player
   - Ground
   - Interactable
-  - Poison
+  - Barrier
   - 
   - 
   - 

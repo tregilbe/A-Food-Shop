@@ -46,8 +46,6 @@ public class ObjectGrabbable : MonoBehaviour
     {
         // set bool to true
         isPoisoned = true;
-        // set the tag to Poison
-        gameObject.tag = "Poison";
         // activate the particle system for poison effect
 
         // Give item slightly green tone?
