@@ -41,6 +41,9 @@ public class Raycasting : Perception
                 {
                     Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
                     result.Add(raycastHit.collider.gameObject);
+
+                    audioSource.PlayOneShot(audioClip);
+
                     detectionPoint += 1;
                     if (detectionPoint == 100)
                     {
