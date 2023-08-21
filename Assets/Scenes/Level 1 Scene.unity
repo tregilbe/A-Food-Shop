@@ -60804,6 +60804,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5584447790475932540, guid: 830bb012ced8ea64f80599432771973b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7295701065877528457, guid: 830bb012ced8ea64f80599432771973b, type: 3}
       propertyPath: m_Name
       value: Barrel - Music
