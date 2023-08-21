@@ -36,7 +36,7 @@ public class AINavigation : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        sm = chairs.GetComponent<SeatingManagement>();
+        //sm = chairs.GetComponent<SeatingManagement>();
         i = Random.Range(0, sm.Chairs.Length);
         agent.destination = sm.Chairs[i].transform.position;
         DisableRagDoll();

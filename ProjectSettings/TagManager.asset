@@ -9,6 +9,7 @@ TagManager:
   - TrashCan
   - Poison
   - Food
+  - Guard
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Interactable
   - 
   - Barrier
-  - 
+  - NPC
   - 
   - 
   - 

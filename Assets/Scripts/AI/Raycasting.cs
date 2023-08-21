@@ -12,6 +12,9 @@ public class Raycasting : Perception
     private PlayerMenuManager manager;
     public GameObject managerPlayer;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     private void Start()
     {
         manager = managerPlayer.GetComponent<PlayerMenuManager>();

@@ -11,6 +11,9 @@ public class EatingFood : MonoBehaviour
     public GameObject miniMe;
     public Transform spawner;
     public GameObject poisonFood;
+
+    public AudioSource audioSource;
+    public AudioClip audioClip;
     
     private ObjectGrabbable poison;
     private void Awake()
@@ -22,8 +25,8 @@ public class EatingFood : MonoBehaviour
 
     private void Start()
     {
-        poison = poisonFood.GetComponent<ObjectGrabbable>();
-        spawnsystem = points.GetComponent<SpawningSystem>();
+        //poison = poisonFood.GetComponent<ObjectGrabbable>();
+        //spawnsystem = points.GetComponent<SpawningSystem>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,7 +34,8 @@ public class EatingFood : MonoBehaviour
         if (other.gameObject.tag == "Poison")
         {
             //print("Dead!!!!");
-            Destroy(this.gameObject);
+            Destroy(other.gameObject);
+            audioSource.PlayOneShot(audioClip);
             spawnsystem.spawnCount--;
             Instantiate(miniMe, spawner.position, spawner.rotation);
             ai.EnableRagDoll();
@@ -45,6 +49,7 @@ public class EatingFood : MonoBehaviour
         {
             //print("Yummy");
             Destroy(other.gameObject);
+            audioSource.PlayOneShot(audioClip);
             spawnsystem.spawnCount--;
             if (transform.parent != null)
             {
