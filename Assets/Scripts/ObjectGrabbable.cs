@@ -53,12 +53,4 @@ public class ObjectGrabbable : MonoBehaviour
         // Give item slightly green tone?
         gameObject.GetComponent<Renderer>().material.color = newColor;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "TrashCan")
-        {
-            Destroy(gameObject);
-        }
-    }
 }
