@@ -6569,7 +6569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   location: {fileID: 3847186215732811976}
-  agent: {fileID: 0}
+  agent: {fileID: 3406795689822875735}
   chairs: {fileID: 0}
   dragBody: {fileID: 2323647338753681771}
 --- !u!1 &8526936145596843149

@@ -38,10 +38,7 @@ public class SpawningSystem : MonoBehaviour
 
     private IEnumerator spawnCustomer(float timer, GameObject customersSpawning)
     {
-
         yield return new WaitForSeconds(timer);
         GameObject newCustomer = Instantiate(customersSpawning, location);
-
-        
     }
 }

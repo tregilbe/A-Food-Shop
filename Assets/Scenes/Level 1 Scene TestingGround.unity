@@ -1250,7 +1250,7 @@ RectTransform:
   - {fileID: 817119410}
   - {fileID: 713588733}
   - {fileID: 163700280}
-  m_Father: {fileID: 1920764568}
+  m_Father: {fileID: 1708580130}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1319,7 +1319,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 538600578}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1507,6 +1507,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3070547452302374279, guid: 9771a444668cbfb449204e0071429327, type: 3}
+      propertyPath: managerPlayer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3442033533765132669, guid: 9771a444668cbfb449204e0071429327, type: 3}
       propertyPath: m_Name
       value: Guard
@@ -7451,11 +7455,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b437f1c2454a2c409b1b7f35e69d661, type: 3}
---- !u!20 &538600578 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3270804617027927158, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
-  m_PrefabInstance: {fileID: 1708580129}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &552265441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10598,7 +10597,7 @@ MonoBehaviour:
   raycastTransform: {fileID: 43119512}
   numRaycast: 25
   detectionPoint: 0
-  managerPlayer: {fileID: 1920764563}
+  managerPlayer: {fileID: 0}
 --- !u!1001 &761747416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57873,17 +57872,23 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9200396749032237701, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7207899899648182544, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2609224436667246611, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 98488652}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8225424776283251291, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1920764569}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
+--- !u!4 &1708580130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2609224436667246611, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
+  m_PrefabInstance: {fileID: 1708580129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1719561653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61115,38 +61120,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4631977158232566, guid: 6dcae7204dd466c4c862bc640ea7c02e, type: 3}
   m_PrefabInstance: {fileID: 1917980804}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1920764563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8225424776283251291, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
-  m_PrefabInstance: {fileID: 1708580129}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &1920764567 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 4744710603560662781, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
-  m_PrefabInstance: {fileID: 1708580129}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1920764568 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7207899899648182544, guid: 37a73fc84b2893047bf2ddbb90aaf39e, type: 3}
-  m_PrefabInstance: {fileID: 1708580129}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1920764569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920764563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8a49f10813a854db0b086c88bcc5fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 163700279}
-  WinMenu: {fileID: 713588732}
-  LoseMenu: {fileID: 817119409}
-  characterController: {fileID: 1920764567}
-  isPaused: 0
 --- !u!1001 &1922160148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61284,7 +61257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prompt: Press 'E' to Enter Basement
   TargetEntryPoint: {fileID: 325469657}
-  player: {fileID: 1920764563}
+  ItemTargetPoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1928925713
 GameObject:
   m_ObjectHideFlags: 0
@@ -63274,7 +63248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prompt: Press 'E' to return to Shop
   TargetEntryPoint: {fileID: 1956873427}
-  player: {fileID: 1920764563}
+  ItemTargetPoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &2134213903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64303,8 +64278,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: 
+  audioClip: {fileID: 0}
   manaGoal: 100
   currentMana: 0
+  player: {fileID: 0}
 --- !u!1 &7130756637700977085
 GameObject:
   m_ObjectHideFlags: 0
